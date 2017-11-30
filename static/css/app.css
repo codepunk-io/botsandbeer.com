@@ -1,3 +1,18 @@
 body {
     text-align: center;
 }
+main {
+    text-align: center;
+}
+.container {
+    width: 40%;
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+}
+.plus {
+    font-size: 10rem;
+}
+.newsletter {
+    width: 25%;
+    margin: 5rem auto;
+}
