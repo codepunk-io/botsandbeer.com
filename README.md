@@ -1,2 +1,3 @@
-# botsandbeer.com
-Web site for the Bots and Beer newsletter and meet-up
+# Bots and Beer
+
+Web site for the Bots and Beer newsletter and meet-up.
