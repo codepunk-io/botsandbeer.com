@@ -4,6 +4,9 @@ body {
 main {
     text-align: center;
 }
+footer {
+    margin-top: 10rem;
+}
 .container {
     width: 40%;
     margin-top: 15rem;
@@ -13,6 +16,11 @@ main {
     font-size: 10rem;
 }
 .newsletter {
-    width: 25%;
+    width: 60%;
     margin: 5rem auto;
+}
+@media (min-width: 40.0rem) {
+    .newsletter {
+        width: 25%;
+    }
 }
