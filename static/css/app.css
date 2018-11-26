@@ -7,10 +7,28 @@ main {
 footer {
     margin-top: 10rem;
 }
+a,
+a:hover,
+a:visited {
+    color: #cd841f;
+}
 .container {
-    width: 40%;
+    width: 100%;
     margin-top: 12rem;
     margin-bottom: 10rem;
+}
+.column-25 {
+    max-width: 100% !important;
+}
+.column-25 > img {
+    margin-bottom: 2rem;
+}
+.column-75 {
+    text-align: left;
+    max-width: 100% !important;
+}
+.row {
+    margin-bottom: 3rem;
 }
 .plus {
     font-size: 10rem;
@@ -22,5 +40,16 @@ footer {
 @media (min-width: 40.0rem) {
     .newsletter {
         width: 25%;
+    }
+}
+@media (min-width: 80.0rem) {
+    .container {
+        width: 40%;
+    }
+    .column-25 {
+        max-width: 25%;
+    }
+    .column-75 {
+        max-width: 75%;
     }
 }
