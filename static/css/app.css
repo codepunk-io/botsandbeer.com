@@ -30,6 +30,14 @@ a:visited {
 .row {
     margin-bottom: 3rem;
 }
+.row-section {
+    background-color: #cd841f1c;
+}
+.row-section > h4 {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+}
 .plus {
     font-size: 10rem;
 }
