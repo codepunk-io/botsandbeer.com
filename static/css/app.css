@@ -45,6 +45,9 @@ a:visited {
     width: 60%;
     margin: 5rem auto;
 }
+.u {
+    text-decoration: underline;
+}
 @media (min-width: 40.0rem) {
     .newsletter {
         width: 25%;
