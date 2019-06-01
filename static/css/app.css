@@ -7,10 +7,36 @@ main {
 footer {
     margin-top: 10rem;
 }
+a,
+a:hover,
+a:visited {
+    color: #cd841f;
+}
 .container {
-    width: 40%;
+    width: 100%;
     margin-top: 12rem;
     margin-bottom: 10rem;
+}
+.column-25 {
+    max-width: 100% !important;
+}
+.column-25 > img {
+    margin-bottom: 2rem;
+}
+.column-75 {
+    text-align: left;
+    max-width: 100% !important;
+}
+.row {
+    margin-bottom: 3rem;
+}
+.row-section {
+    background-color: #f8eddc;
+}
+.row-section > h4 {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
 }
 .plus {
     font-size: 10rem;
@@ -19,8 +45,22 @@ footer {
     width: 60%;
     margin: 5rem auto;
 }
+.u {
+    text-decoration: underline;
+}
 @media (min-width: 40.0rem) {
     .newsletter {
         width: 25%;
+    }
+}
+@media (min-width: 80.0rem) {
+    .container {
+        width: 40%;
+    }
+    .column-25 {
+        max-width: 25%;
+    }
+    .column-75 {
+        max-width: 75%;
     }
 }
