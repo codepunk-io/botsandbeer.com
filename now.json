@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "name": "botsandbeer.com",
+    "builds": [
+        { "src": "**/*.html", "use": "@now/static" },
+        { "src": "metron.json", "use": "@now/static" },
+        { "src": "static/**", "use": "@now/static" },
+        { "src": "package.json", "use": "@now/static-build",  "config": { "distDir": "./" }}
+    ],
+    "routes": [
+        { "src": "^/", "dest": "/index.html" },
+        { "src": "^/about", "dest": "/about.html" },
+        { "src": "^/metron.json", "dest": "/metron.json" },
+        { "src": "^//metron.json", "dest": "/metron.json" },
+        { "src": "^/static/(.+)", "dest": "/static/$1" }
+    ],
+    "alias": [
+        "botsandbeer.com"
+    ]
+}
