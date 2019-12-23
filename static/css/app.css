@@ -74,6 +74,9 @@ a:visited {
 .editor-box p {
     font-size: 1.4rem;
 }
+.rotate {
+    transform: rotate(-180deg);
+}
 @media (min-width: 40.0rem) {
     .newsletter {
         width: 25%;
