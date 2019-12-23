@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="text mining, craft beer, beer reviews" />
+    <meta name="description" content="What better article to feature in a bots and beer newsletter than one that actually has to do with artificial intelligence (okay, text mining) and craft beer?" />
+    <title>Tidy Text Mining Beer Reviews : Bots + Beer 0x04</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Exo" />
+    <link rel="stylesheet" href="/static/css/_gen/concat.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <h1 class="heading" title="Bots + Beer Email Newsletter">🤖 + 🍺 Bots and Beer</h1>
+        </div>
+        <div class="column">
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                #mc_embed_signup {
+                  background: #fff;
+                  clear: left;
+                  font:14px Helvetica,Arial,sans-serif;
+                  width:100%;
+                }
+                #mc_embed_signup form {
+                  text-align: left;
+                }
+            </style>
+            <div id="mc_embed_signup">
+                <form action="https://codepunk.us12.list-manage.com/subscribe/post?u=807c5c5ce19ae80f54a5652a2&amp;id=d2c411de07" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <label for="mce-EMAIL">Give us your email, and we'll give you the goods.</label>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <div style="position: absolute; left: -5000px;margin-bottom:1rem;" aria-hidden="true">
+                    <input type="text" name="b_807c5c5ce19ae80f54a5652a2_d2c411de07" tabindex="-1" value="">
+                    </div>
+                    <div class="clear">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="row row-section">
+        <div class="column">
+            <div class="masthead">
+                <img src="/static/images/0x04-01.jpg" alt="Tidy Text Mining Beer Reviews" title="Tidy Text Mining Beer Reviews" />
+            </div>
+        </div>
+      </div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <h4 class="row-heading first">0x04 Tidy Text Mining Beer Reviews</h4>
+
+                    <p>What better article to feature in a bots and beer newsletter than <a href="http://kaylinwalker.com/tidy-text-beer/" target="_blank">one that actually has to do with artificial intelligence (okay, text mining) and craft beer</a>? We decided to give this article a little love, and let it be the only article featured. Bill and I will both give our thoughts, and some beer picks. Enjoy! <em>--Michael Szul</em></p>
+                    <p><em>I'm leaving tomorrow for the Microsoft MVP Summit! Hopefully, I see some of you there. It's all under NDA, so I won't be able to share anything, but hopefully it will give me a good idea of the roadmap for chatbots and machine learning moving forward--at least from Micosoft's perspective. --MS</em></p>
+                    <p>The taxonomy of beer tasting is far more complex than I ever could have imagined.  What surprises me the most is that <a href="https://www.beeradvocate.com">BeerAdvocate.com</a> both doesn't support the open data, and does not offer some kind of API of its own. Allowing this layer of interaction with its audience of beer aficionados and technology only seems like a positive. <em>--Bill Ahern</em></p>
+                    <p>BeerAdvocate is a great site, but as Bill mentioned, not having an API is a big negative, in my opinion. In addition, making <a href="https://twitter.com/kaylinquest" target="_blank">Pavlik</a> take down the data set she put together makes me not want to use the site much anymore. I understand their need to protect their intellectual property, but most of these reviews are user submitted. They have an opportunity to develop a great craft beer data set, but would rather keep their site (and all their data) closed.</p>
+                    <p>In any event, through term frequency analysis, Pavlik has a nice write-up of what terms users use most to describe certain types of beer. It also seems like blueberry is the most popular term (and flavor) for a fruit beer, while American Pale Ales have a distinct grapefruit taste.</p>
+                    <p>Through this term frequency, Pavlik then builds out a nice correlation diagram to show which beers are most similar to each other in the opinions (reviews) of the site users. She then does some nice hierarchical clustering to group the beers into specific categories.</p>
+                    <p>Pavlik then takes a shot at predicting the beer style of unclassified reviews using k-Nearest Neighbor on the words. Ultimately there were beers that were easily to predict (stouts) and those that weren't (Gose), but this was a great thought experiment, and you can take a look at the <a href="https://github.com/walkerkq/tidy_text_beer" target="_blank">R source code on GitHub</a>. <em>--MS</em></p>
+                    <p class="center"><img src="/static/images/0x04-02.jpg" alt="Weyerbacher Sunday Morning Stout" title="Weyerbacher Sunday Morning Stout" /></p>
+                    <h4 class="row-heading first">Weyerbacher Sunday Morning Stout</h4>
+                    <p><strong>12.7% ABV.</strong>A delicious Bourbon Barrel coffee Stout, a little bit on the bitter side but very much in line with fans of Founders Breakfast Stout. <em>--BA</em></p>
+                    <p class="center"><img src="/static/images/0x04-03.jpg" alt="Hardywood Raspberry Stout" title="Hardywood Raspberry Stout" /></p>
+                    <h4 class="row-heading first">Hardywood Raspberry Stout</h4>
+                    <p><strong>9.2% ABV</strong>Originally a part of Hardywood's Virginia Reserve series, this one makes it into their regular rotation around winter time. A chocolate stout with local raspberries, it pours with a medium-thickness head that has a reddish tinge to it. The raspberry flavor slightly cuts the traditional bitterness of chocolate and stout beer. Highly drinkable, they recently went to a smaller bottle size, so buy two! I'm usually one to try new things at the craft beer store, but when I see this in stock, I'll buy it a few weeks in a row because it's a favorite. <em>--MS</em></p>
+                    <p><em>See you all on the other side of this trip! --MS</em></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <h6><a href="/">go back</a> - a <a href="https://codepunk.io" rel="external">codepunk</a> lab</h6>
+    </footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22459488-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-22459488-5');
+    </script>
+  </body>
+</html>
