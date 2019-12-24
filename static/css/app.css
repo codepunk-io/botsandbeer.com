@@ -22,6 +22,9 @@ a:visited {
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
+.container.wide {
+    max-width: none;
+}
 .column-25 {
     max-width: 100% !important;
 }
