@@ -9,6 +9,9 @@ main img {
 h1 {
     font-size: 3.2rem;
 }
+h1 > a {
+    color: #606c76 !important;
+}
 footer {
     text-align: center;
 }
