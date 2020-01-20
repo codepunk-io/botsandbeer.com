@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="chatbots, voice apps, conversational interface, conversation, cui, conversational user interface, conversational ui" />
+    <meta name="description" content="Way back in March of 2017, we did a podcast episode on the Microsoft Bot Framework. Shortly thereafter, I (Michael) started working on a book about how to build chatbots with the Bot Framework Node.JS SDK." />
+    <title>Chatbots for the Conversational Interface : Bots + Beer 1x04</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Exo" />
+    <link rel="stylesheet" href="/static/css/_gen/concat.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body>
+    <div class="container wide">
+      <div class="row">
+        <div class="column">
+          <h1 class="heading" title="Bots + Beer Email Newsletter"><a href="/">🤖 + 🍺 Bots and Beer</a></h1>
+        </div>
+        <div class="column">
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                #mc_embed_signup {
+                  background: #fff;
+                  clear: left;
+                  font:14px Helvetica,Arial,sans-serif;
+                  width:100%;
+                }
+                #mc_embed_signup form {
+                  text-align: left;
+                }
+            </style>
+            <div id="mc_embed_signup">
+                <form action="https://codepunk.us12.list-manage.com/subscribe/post?u=807c5c5ce19ae80f54a5652a2&amp;id=d2c411de07" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <label for="mce-EMAIL">Give us your email, and we'll give you the goods.</label>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <div style="position: absolute; left: -5000px;margin-bottom:1rem;" aria-hidden="true">
+                    <input type="text" name="b_807c5c5ce19ae80f54a5652a2_d2c411de07" tabindex="-1" value="">
+                    </div>
+                    <div class="clear">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="row row-section">
+        <div class="column">
+            <div class="masthead">
+                <img src="/static/images/1x04-01.png" alt="Chatbots for the Conversational Interface" title="Chatbots for the Conversational Interface" />
+            </div>
+        </div>
+      </div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <h4 class="row-heading first">1x04 Chatbots for the Conversational Interface</h4>
+                    <p>This issue is a little self-serving since the <a href="https://www.amazon.com/Building-Chatbots-TypeScript-Microsoft-Framework/dp/0578513498/ref=tmm_pap_swatch_0?_encoding=UTF8&amp;qid=1559580837&amp;sr=8-1">chatbot book</a> is out. Sorry in advance. You can skip it, if you don't care. No hard feelings. The next issue will focus on John Galton, Timothy Leary, and the failed promise of computer libertarianism.</p>
+                    <p>Way back in March of 2017, we did <a href="https://codepunk.io/codepunk-013-programmable-bots-and-the-microsoft-bot-framework/">a podcast episode</a> on the <a href="https://dev.botframework.com">Microsoft Bot Framework</a>. Shortly thereafter, I (Michael) started working on a book about how to build chatbots with the Bot Framework Node.JS SDK. 2 years, a dozen speaking engagements, two rewrites, and countless tweaks later, the book is officially finished. It was a long road, and I've learned that writing a book is easy, but finishing a book is hard. A lot has happened in the last two years, and certainly a lot is still happening in the conversational interface space, so I wanted to take this issue of the newsletter to not only announce the book, but to also details some of the exciting innovations that have been continuing in the chatbot space.</p>
+                    <p style="text-decoration: underline;">Some history:</p>
+                    <p>When we made plans to do the initial podcast episode it was just after the Bot Framework SDK v3 had been released. I wanted to build a sample chatbot for the episode, so that I knew what I was talking about, and had a little more hands-on experience. I decided to go with the Node.JS SDK because prototyping in JavaScript (TypeScript in this case) had become such a quick-and-dirty thing to throw together. It's funny how these few years latter many people online look at me as the JavaScript bot guy, when most of my everyday job deals with being knee-deep in C#.</p>
+                    <p>Something about chatbots just spoken to me. It wasn't a new technology, but it was a rising one, and I felt I could make my mark as an expert in this niche, but growing field. A lot of my earlier blog posts began to center on the Bot Framework, and eventually, I found myself awarded the <a href="https://mvp.microsoft.com">Microsoft MVP</a> status, and was able to make a trip out to Bellevue. It was here I was able to officially meet <a href="https://twitter.com/GaryPretty">Gary Pretty</a> and <a href="https://twitter.com/jamesemann">James Mann</a>: Two high profile Bot Framework communicators from the community.</p>
+                    <p>Just prior to the MVP Summit in Bellevue; however, I began writing the aforementioned book on the Bot Framework. I was probably 2/3rds of the way through it when Microsoft announced via a PGI call that the Bot Framework SDK v4 was coming out, and it was changing an awful lot. I cringed slightly, knowing that I was going to have to rewrite large portions of the book, and unsure if I had the capacity to do it. By the time Microsoft Build came around (where the SDK v4 was announced), I had decided to continue forward. This would be the first of two rewrites, as later changes between preview and GA also required some fine-tuning.</p>
+                    <p>Throughout this process, I had about <a href="https://michael.szul.us">7 speaking engagements</a> about chatbots on the East coast region--from code camps to regional conferences like <a href="https://syntaxcon.com/2018/speaker/michael-szul/">SyntaxCon</a>. While starting to wrap up the book, I worked with an acquisitions editor at O'Reilly making changes to align it with O'Reilly's vision. The book was accepted, I made several more revisions during the contract formation, agreed to a bunch of dates, worked hard to get the chapters ready, signed the contract, and then watched as O'Reilly pulled the contract on the book two days before I was set to deliver the first two chapters and receive the first advance. The last minute rescission sucked, but not because of it getting pulled. I was set to donate the proceeds to autism research, so I was disappointed in that outcome (side note: my acquisitions editor was top-notch during this process, and continued to promote some of my other work even after the contract was pulled).</p>
+                    <p>Despite that setback, I was receiving interest from several other publishers, including Packt. But I decided to reach out to <a href="https://rob.conery.io">Rob Conery of Big Machine</a> to discuss some of the indie publishing he had been doing. I have become a big fan of indie publishing over the last few years, including email newsletters like <a href="https://sentiers.media">Sentiers</a> and small print magazines like <a href="https://logicmag.io">Logic</a>, <a href="https://theregenmag.com">Regeneration</a>, and <a href="https://www.offscreenmag.com">Offscreen</a>. Some of the best technology books I've read over the past two years have been from self-publishing or indie publishers. Rob convinced me that I should have stuck with my initial instinct, and handled the process myself. I decided to go the indie route, mostly because I've been slowly creating a <a href="https://october.codes">non-profit meant to empower human decision-making with technology</a>. This particular non-profit is centered around technology support for initiatives in neurodiversity and climate change.</p>
+                    <p>It was a long, hard road. Multiple revisions gave way to upgrading code which gave way to copy-editing, technical reviewers, and indexing. Somewhere along the way, I needed to learn LaTeX. At the end of the day, the book was finally finished, and sales for the book go to support research in autism and neurodiversity, which makes it a bit of a passion project for me, and makes up for the loss when the book was associated with O'Reilly.</p>
+                    <p>If you've read this far, and you're interested in the book, reply to this email. The first 20 people who respond will get a free PDF copy of the book, and a thank you. I couldn't have done this, and Bill and I wouldn't be able to continue all of these passion projects without you. If you like the book, feel free to drop it an Amazon review.</p>
+                    <p>Also, I'd liked to thank Bill for allowing me to hijack this issue to promote the book. He's often the unsung, behind-the-scenes guy with most of these projects--whether editing, audio, ideas, etc. <em>--Michael Szul &amp; Bill Ahern</em></p>
+
+                    <h4 class="row-heading">The Bot Builder Community</h4>
+                    <p>When I was selected a Microsoft Valued Professional, it was actually for the Developer Technologies category--even though a lot of the work I was doing was with the Bot Framework. When I finally made it to Bellevue for the <a href="https://mvp.microsoft.com/en-us/Summit">MVP Summit</a>, I was able to meet a few guys in the AI category that were there specifically for the Bot Framework: Gary Pretty and James Mann. Several months later, Gary, James, and Arafat Tehsin put together the <a href="https://github.com/BotBuilderCommunity">Bot Builder Community</a> on GitHub, and invited me to collaborate. Gary has built out a really mature offering on the .NET side (including Alexa and Google Home adapters), and I'm slowly building out the Node.JS side (starting with middleware and dialogs for NLP). We've even received some collaboration with Microsoft employees. If you're looking to create chatbots, this is probably the community you want to be involved in--especially if you're more about the creation process.<em> --MS</em></p>
+
+                    <h4 class="row-heading">Things Tagged with "chatbots"</h4>
+                    <p>We've covered several chatbot and Bot Framework items on <a href="https://codepunk.io">Codepunk</a> over the last few years. Check out everything we have <a href="https://codepunk.io/tag/chatbots/">tagged with the term "chatbots."</a> <em>--MS</em></p>
+
+                    <h4 class="row-heading">Bot Framework Tutorial Series</h4>                     
+                    <p>Bill and I have been trying to tackle all forms of media when it comes to creating informative content. It started with the <a href="https://codepunk.io">Codepunk</a> web site, and then continued with the <a href="https://codepunk.io/tag/podcast/">podcast</a> (which is primarily Bill doing all the hard work). We have this <a href="https://botsandbeer.com">newsletter</a>, of course, but we also started producing some <a href="https://youtube.com/c/codepunk">tutorial videos</a>. I've actually cut down on my speaking engagements a lot in order to focus more on this newsletter and the video tutorials. We started with tutorial videos on the Node.JS SDK v3, and then eventually upgraded to <a href="https://www.youtube.com/playlist?list=PLz6hh7iUxR22NewUgZjhQxYL7iL6lAmUM">SDK v4</a>. We even started to include videos on the <a href="https://www.youtube.com/playlist?list=PLz6hh7iUxR20qmLdfv9MbWeVsdw9uKodM">MSBot tool</a>, <a href="https://www.youtube.com/playlist?list=PLz6hh7iUxR22Aw3l7C9BtPZh_REMBjAMy">LUIS</a>, <a href="https://www.youtube.com/playlist?list=PLz6hh7iUxR21lAh7a3yjcRwZN6FnDUxpr">Chatdown</a>, and the <a href="https://www.youtube.com/playlist?list=PLz6hh7iUxR23Vv9t6NU4glJuWGCXe9Wfs">QnA Maker</a>.<br>
+                    <p>Recently, we've added a few non-chatbot tutorials for <a href="https://www.youtube.com/playlist?list=PLz6hh7iUxR23GYrh2MnZR8H6NFU_KrNVK">LinkedIn</a> and <a href="https://www.youtube.com/playlist?list=PLz6hh7iUxR22tMe1ENMVYgBtGEJ4GRLWj">JavaScript</a>, and of course, you can also find the <a href="https://www.youtube.com/playlist?list=PLz6hh7iUxR23YYKe1Tf5yR0DbnqTfJZFb">podcast</a> there. Looking towards the future, the hope is to include more topical and discussion-based videos to compliment the tutorial series. Kind of like how the podcast helps compliment the web site. <em>--MS</em>
+
+                    <p class="center"><img src="/static/images/1x04-02.jpg" alt="Terreux Peach Sour Blonde Ale" title="Terreux Peach Sour Blonde Ale" /></p>
+                    <h4 class="row-heading first">Terreux Peach Sour Blonde Ale</h4>
+                    <p>The Breury's Terreux is a peach sour blonde ale in a 750ML bottle. Sours vary in strength when it comes to both ABV and sourness, and this one is no exception. This beer sits at about 7% alcohol and is one of the more sour beers I've tasted. The sour almost eliminates the taste of alcohol, but allows the peach to come through. I actually didn't finish this bottle on the first day, as it was late into the night, but I sampled what was left over the next day, and the sour was enhanced even more.</p>
+                    <p>This is more for fans of sours and gose than casual drinkers, as the flavor profile might overpower some people's taste buds<span style="font-size:16px">. <em>--MS</em></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container">
+      <div class="row">
+        <div class="column">
+          <h6><a href="/">go back</a></h6>
+        </div>
+        <div class="column"><small>Copyright 2017-2020.</small></div>
+        <div class="column">
+          <h6 class="rotate">this is a <a href="https://strangeloop.run" rel="external">strange loop</a></h6>
+        </div>
+      </div>
+    </footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22459488-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-22459488-5');
+    </script>
+  </body>
+</html>
