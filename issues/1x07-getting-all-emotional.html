@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="chatbots, ibm, ibm watson, natural language processing, nlp, emotion detection, psychotherapy chatbot" />
+    <meta name="description" content="The neat thing about Watson's NLU is that it doesn't just track sentiment, but actually attempts to detect and analyze emotions as well. If asked, it'll return an emotion score object containing five emotions and their various scores." />
+    <title>Getting All Emotional : Bots + Beer 1x07</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Exo" />
+    <link rel="stylesheet" href="/static/css/_gen/concat.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body>
+    <div class="container wide">
+      <div class="row">
+        <div class="column">
+          <h1 class="heading" title="Bots + Beer Email Newsletter"><a href="/">🤖 + 🍺 Bots and Beer</a></h1>
+        </div>
+        <div class="column">
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                #mc_embed_signup {
+                  background: #fff;
+                  clear: left;
+                  font:14px Helvetica,Arial,sans-serif;
+                  width:100%;
+                }
+                #mc_embed_signup form {
+                  text-align: left;
+                }
+            </style>
+            <div id="mc_embed_signup">
+                <form action="https://codepunk.us12.list-manage.com/subscribe/post?u=807c5c5ce19ae80f54a5652a2&amp;id=d2c411de07" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <label for="mce-EMAIL">Give us your email, and we'll give you the goods.</label>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <div style="position: absolute; left: -5000px;margin-bottom:1rem;" aria-hidden="true">
+                    <input type="text" name="b_807c5c5ce19ae80f54a5652a2_d2c411de07" tabindex="-1" value="">
+                    </div>
+                    <div class="clear">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="row row-section">
+        <div class="column">
+            <div class="masthead">
+                <img src="/static/images/1x07-01.jpg" alt="Getting All Emotional" title="Getting All Emotional" />
+            </div>
+        </div>
+      </div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <h4 class="row-heading first">1x07 Getting All Emotional</h4>
+                    <p>I was somewhat hesitant to run with this issue because we tackled personality and chatbots in the previous newsletter. I didn't want to seem like I was duplicating themes, and there is so much more in the new cyberia that I'd like to indulge in and tackle.</p>
+                    <p>I settled on this topic based on <a href="https://svtc-va.org/event/conversational-software-sept-luncheon/">a luncheon talk that I gave</a>. This talk was meant as a preview of a longer discussion I had planned for the <a href="https://www.valleytechcon.com/agenda-2019/">ValleyTechCon</a> about chatbots. In organizing my slides, I included a handful from the <a href="https://github.com/BotBuilderCommunity/botbuilder-community-js">Bot Builder Community GitHub repository</a> because I had been doing a lot of work creating swappable engines so you could use the Bot Framework with text analysis services beyond just Microsoft's Text Analytics API. One of those services was <a href="https://www.ibm.com/watson/services/natural-language-understanding/">IBM Watson's Natural Language Understanding</a> (NLU) service.</p>
+                    <p>The neat thing about Watson's NLU is that it doesn't just track sentiment, but actually attempts to detect and analyze emotions as well. If asked, it'll return an emotion score object containing five emotions and their various scores. When I gave the luncheon talk, I offhandedly pointed out that with emotion detection you could create a psychotherapy chatbot in minimal lines of code. When I got home later that day, I thought about that statement a little more, and decided I would take a weekend to see how far I could get.</p>
+                    <p>By no means did I build a psychotherapy chatbot--at least not one that would replace your friendly neighborhood psychoanalyst. But in targeting Rogerian talk therapy, I was able to produce a minimally viable conversation that keyed on the emotional content of single messages, and circulated randomly selected statements based on that emotional content to further the discussion. I did that in a weekend. What could someone do in a month? In a year?</p>
+                    <p>Watson's emotion detection doesn't just analyze entire messages, but can also give emotion scores for specifically targeted words. In addition, rather than looking purely at emotion, you can use entity extraction and keyword detection to pull out important words and phrases, each with an emotional context attached. Watson also allows you to identify key concepts, while categorizing text based on major groupings.</p>
+                    <p>Hypothesize with me:</p>
+                    <p>You build a chatbot that accepts messages from a user, and using the Watson NLU via the Bot Builder Community middleware, you can immediately determine the overall concept of the message: "Childhood." The entity extraction middleware then gives you entities of "mother," "father," and "childhood home" with a key phrase of "moved away." Each of those elements have an emotion score attached to them. Father ranks highest with fear, while mother ranks highest with sadness. "Childhood home" ranks highest with joy, but "moved away" ranks highest for sadness.</p>
+                    <p>As a human looking at this language and these score, you can easily determine what the context is, and likely how you should respond, especially if you're only interested in asking non-binary questions that further the conversation, allowing for deeper self-reflection. How would you do this programmatically?</p>
+                    <p>We could design a database of concepts with each concept associated with one or more scenarios (possibly key phrases in a psychotherapy session). These concept/scenario combinations could then encapsulate a number of responses that a therapy bot could send back to the user, but we could filter said responses based on the entities that have been extracted, and we can rank the responses based on the emotion scores provided, depending on which entity we want to dive deeper into. In this scenario, we might want to know more about the user's relationship with his or her father prior to moving.</p>
+                    <p>What about things we don't know? Remember when we talked about Microsoft's Personality Project in the last issue? That was an editorially curated list of responses, but if no response was readily available, it fell back to a deep neural network to try to determine the appropriate language. Something similar (albeit more complicated) could be built for therapy responses, considering that all of the components needed for a follow-up response have already been extracted.</p>
+                    <p>So what's the point? The point is that--given a weekend--I was able to bring a simple idea into a novelty--a toy capable of amusing people with psychotherapeutic meanderings, and I didn't have to write complex math to do it; The Watson packages were at my fingertips. Given a modest budget, a year, and a few good machines, and you could challenge the norms of psychotherapy and the entire counseling industry--whether they're prepared for it or not.<em> --Michael Szul &amp; Bill Ahern</em></p>
+
+                    <p><mark><em>Want to take this conversation further? We're experimenting with a public team on <a href="https://keybase.io">Keybase</a>--an end-to-end encrypted messaging, file, and identity management service. <a href="https://keybase.io/team/codepunk">Check out our public team here</a>. You can also contact <a href="https://keybase.io/neurothustra">Bill</a> and <a href="https://keybase.io/szul">me</a> directly from the chat feature. --MS</em></mark></p>
+
+                    <div class="editor-box">
+                        <h4 class="row-heading first">Editor(s) Note:</h4>
+                        <p>Interested in artificial intelligence, natural language processing, and chatbots in particular? Don't forget that Michael wrote a book: <a href="https://www.amazon.com/Building-Chatbots-TypeScript-Microsoft-Framework/dp/0578513498/ref=tmm_pap_swatch_0?_encoding=UTF8&amp;qid=1559325964&amp;sr=8-1"><em>Building Chatbots in TypeScript with the Microsoft Bot Framework</em></a>.</p>
+                    </div>
+
+                    <h4 class="row-heading">Woebot</h4>
+                    <p>You don't have to wait for me or anybody else to build your therapy bot. They're already out there. In fact, they run as far back as 2017 <a href="https://www.wired.com/2017/06/facebook-messenger-woebot-chatbot-therapist/">when Wired ran an article about Woebot</a>--a chatbot built by Stanford research to help reduce anxiety (for the "low" price of $39.00 a month). Woebot specializes in cognitive behavioral therapy rather than Rogerian therapy, so it's primary course of action is to analyze your emotional state, and suggest actions to take to alleviate situational anxiety.</p>
+                    <p>Since the Wired article, <a href="https://www.woebot.io">Woebot</a> has expanded to included lessons, exercises, and other ways to help beyond the simple conversational experience, but it's still careful to identify itself as a tool of self-reflection and not a replacement for clinical judgement.<em> --MS</em></p>
+
+                    <h4 class="row-heading">Stephen Allwine</h4>
+                    <p>On the <a href="https://codepunk.io/codepunk-051-stephen-allwine-and-how-to-hire-a-hitman/">latest episode</a> of Codepunk, we took a look at the Stephen Allwine case, and contemplate the uptick in recent news stories about Dark Web murders. <em>--BA</em></p>
+
+                    <h4 class="row-heading">X2 and Tess</h4>                     
+                    <p>I get a little wary when I see a human-centered initiative with very non-human centered name. <a href="https://www.x2ai.com">X2</a> is promoting affordable mental health outcomes, while very much tying itself to the self-help movement, and identifies Tess as a tool to handle 25% of "mild" cases for counselors. Rather than give you the marketing pitch, I'll just leave some words from the CEO:</p>
+                    <blockquote>
+                        <p>"Through trial and error, I found a wonderful psychologist, who was able to help me through that time by using talk-therapy. Later on, I realized that when I was speaking with my friends and colleagues, I was simply repeating the conversations I previously had with my psychologist."</p>
+                        <p>"That's when I first realized: 'If I can help people by repeating these conversations, then we could teach a machine to do the same.'" --Michiel Rauws</p>
+                    </blockquote>
+                    <p>Yeah...</p>
+                    <p>The problem is that although I know how fast we're advancing with artificial intelligence and healthcare, the marketing spiel that permeates services such as these can be borderline dangerous--especially when we're talking about mental health.</p>
+                    <p>We'll see where all of this goes.<em> --MS</em></p>
+
+                    <p class="center"><img src="/static/images/1x07-02.jpg" alt="Southern Tier Cold-Pressed Coffee Pumking" title="Southern Tier Cold-Pressed Coffee Pumking" /></p>
+                    <h4 class="row-heading first">Southern Tier Cold-Pressed Coffee Pumking</h4>
+                    <p>In a word: Delicious. While the pumpkin isn't as strong as in the traditional Pumking, there was enough there to compliment the coffee and maple flavor. If you're in the mood for a seasonal pumpkin beer, I'd say that the standard will satisfy your needs while the previously featured Warlock Imperial Pumpkin Stout serves to offer something slightly richer with a mild bitterness. <em>--BA</em></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container">
+      <div class="row">
+        <div class="column">
+          <h6><a href="/">go back</a></h6>
+        </div>
+        <div class="column"><small>Copyright 2017-2020.</small></div>
+        <div class="column">
+          <h6 class="rotate">this is a <a href="https://strangeloop.run" rel="external">strange loop</a></h6>
+        </div>
+      </div>
+    </footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22459488-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-22459488-5');
+    </script>
+  </body>
+</html>
