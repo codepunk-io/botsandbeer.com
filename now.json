@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "name": "botsandbeer.com",
     "builds": [
         { "src": "**/*.html", "use": "@now/static" },
         { "src": "static/**", "use": "@now/static" },

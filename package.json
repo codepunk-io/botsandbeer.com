@@ -4,7 +4,6 @@
   "description": "Web site for the Bots and Beer newsletter and meet-up.",
   "main": "index.html",
   "scripts": {
-    "now-build": "gulp styles",
     "build": "gulp styles",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
